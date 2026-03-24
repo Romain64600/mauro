@@ -1,4 +1,4 @@
-/* Mauro Bolaños — vitrine bodyboard */
+/* Mauro Bolaños — sitio vitrina (dossier deportivo) */
 :root {
   --bg-deep: #061018;
   --bg-card: rgba(12, 32, 48, 0.55);
@@ -747,4 +747,141 @@ section {
 
 .site-footer a:hover {
   color: var(--accent);
+}
+
+/* Español / dossier PDF */
+.hero-handles {
+  font-size: 0.9rem;
+  margin: -0.5rem 0 1rem;
+  color: var(--text-muted);
+}
+
+.hero-handles a {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .hero-handles {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.section-intro--tight {
+  margin-bottom: 1.25rem;
+}
+
+.section-title--spaced {
+  margin-top: 3.5rem;
+}
+
+.section-dossier {
+  padding-top: 2rem;
+}
+
+.card-note {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.card-note--muted {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+.info-card--impact {
+  max-width: 520px;
+}
+
+.pdf-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .pdf-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pdf-gallery__item {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(46, 196, 182, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pdf-gallery__item--wide {
+  grid-column: 1 / -1;
+}
+
+.pdf-gallery__item img {
+  width: 100%;
+  height: auto;
+}
+
+.pdf-gallery__item figcaption {
+  padding: 0.65rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.argument-block {
+  max-width: 65ch;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.argument-block p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.sponsor-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.sponsor-list li {
+  margin-bottom: 0.65rem;
+}
+
+.sponsor-list li:last-child {
+  margin-bottom: 0;
+}
+
+.youtube-ref {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--sand);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+.contact-icons-caption {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
