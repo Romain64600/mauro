@@ -726,7 +726,7 @@ section {
 }
 
 .contact-card {
-  max-width: 640px;
+  max-width: min(640px, 100%);
   margin: 0 auto;
   text-align: center;
   padding: 2.5rem;
@@ -734,6 +734,13 @@ section {
   background: var(--bg-card);
   border: 1px solid rgba(46, 196, 182, 0.2);
   backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .contact-links {
@@ -741,19 +748,29 @@ section {
   flex-direction: column;
   gap: 1rem;
   margin-top: 1.75rem;
+  min-width: 0;
 }
 
 .contact-links a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   gap: 0.5rem;
-  padding: 0.85rem 1.25rem;
+  padding: 0.85rem 1rem;
   border-radius: 12px;
   background: rgba(46, 196, 182, 0.1);
   color: var(--text);
   font-weight: 600;
+  font-size: clamp(0.85rem, 2.8vw, 0.95rem);
   border: 1px solid rgba(46, 196, 182, 0.25);
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .contact-links a:hover {
@@ -768,6 +785,13 @@ section {
   text-align: center;
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.site-footer p {
+  margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  padding-inline: 0.5rem;
 }
 
 .site-footer a {
@@ -913,4 +937,14 @@ section {
   margin: 0 0 0.5rem;
   font-size: 0.75rem;
   color: var(--text-muted);
+  overflow-wrap: anywhere;
+  padding-inline: 0.25rem;
+}
+
+.section-contact .section-intro {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+  padding-inline: 0.25rem;
+  box-sizing: border-box;
 }
